@@ -6,57 +6,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D&D - Ініциатива</title>
   <style>
-.none{display:none}.hidden{visibility:hidden}.flex-jc-sb{display:flex;justify-content:space-between;align-items:center}.flex-jc-sa{display:flex;justify-content:space-around;align-items:center}.container{height:100vh;display:flex;justify-content:center;align-items:center}.app{display:flex;border:1px solid black;height:500px}.app input[name=hp]{font-weight:bold;color:red}.app__characters-title-list{width:300px;margin-bottom:20px;padding:10px;overflow:auto}.app__windows-column{width:300px;padding:10px 40px;padding-right:40px}.app__ch-edit-form{height:170px}.app__ch-edit-form input::-webkit-outer-spin-button,.app__ch-edit-form input::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;margin:0}.app__ch-edit-form input[name=name]{height:34px;width:100%;border:none;text-transform:uppercase;text-align:center}.app__ch-edit-form input[name=hp],.app__ch-edit-form input[name=initiative]{text-align:center;width:50px;height:30px;border:none}.app__ch-edit-form textarea{width:98%;resize:none}.app__corect-add{height:220px;margin-top:30px}.app__corect-add input::-webkit-outer-spin-button,.app__corect-add input::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;margin:0}.app__corect-add input{height:30px}.form__add-ch-one,.form__add-ch-some{padding:20px;border:1px solid black}.form__add-ch-one div,.form__add-ch-some div{padding:5px 0}.form__add-ch-one input[name=hp],.form__add-ch-some input[name=hp]{width:50px}.form__add-ch-one input[name=initiative],.form__add-ch-one input[name=modification],.form__add-ch-one input[name=amount],.form__add-ch-some input[name=initiative],.form__add-ch-some input[name=modification],.form__add-ch-some input[name=amount]{width:70px}.form__add-ch-one#k20,.form__add-ch-some#k20{display:inline-block;text-align:center;cursor:pointer;width:35px;height:24px;border:1px solid black}.form__button{width:100%;text-align:center;margin-top:10px}.form__button button{width:100px;height:30px}.ch{display:flex;justify-content:space-between;padding:0 10px;line-height:40px;color:#000;text-decoration:none;cursor:default;transition:0.2s}.ch:hover{background:#cacad3}.ch__name{max-width:140px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.ch__info{display:flex;justify-content:space-between;width:120px}.ch__hp{width:35px}.ch__hp b{color:red}.ch__delete{cursor:pointer}#k20{width:50px;height:50px}#k20:hover{background:#cacad3}.window__buttons{display:flex;justify-content:space-between}.window__buttons button{margin:0 5px}
+    .none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.flex-jc-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-jc-sa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  border: 1px solid black;
+  height: 500px;
+}
+.app input[name=hp] {
+  font-weight: bold;
+  color: red;
+}
+.app__characters-title-list {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+.app__windows-column {
+  width: 300px;
+  padding: 10px 40px;
+  padding-right: 40px;
+}
+.app__ch-edit-form {
+  height: 170px;
+}
+.app__ch-edit-form input::-webkit-outer-spin-button,
+.app__ch-edit-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.app__ch-edit-form input[name=name] {
+  height: 34px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.app__ch-edit-form input[name=hp], .app__ch-edit-form input[name=initiative] {
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  border: none;
+}
+.app__ch-edit-form textarea {
+  width: 98%;
+  resize: none;
+}
+.app__corect-add {
+  height: 220px;
+  margin-top: 30px;
+}
+.app__corect-add input::-webkit-outer-spin-button,
+.app__corect-add input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.app__corect-add input {
+  height: 30px;
+}
+
+.form__add-ch-one, .form__add-ch-some {
+  padding: 20px;
+  border: 1px solid black;
+}
+.form__add-ch-one div, .form__add-ch-some div {
+  padding: 5px 0;
+}
+.form__add-ch-one input[name=hp], .form__add-ch-some input[name=hp] {
+  width: 50px;
+}
+.form__add-ch-one input[name=initiative], .form__add-ch-one input[name=modification], .form__add-ch-one input[name=amount], .form__add-ch-some input[name=initiative], .form__add-ch-some input[name=modification], .form__add-ch-some input[name=amount] {
+  width: 70px;
+}
+.form__add-ch-one #k20, .form__add-ch-some #k20 {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  width: 35px;
+  height: 24px;
+  border: 1px solid black;
+}
+.form__button {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.form__button button {
+  width: 100px;
+  height: 30px;
+}
+
+.ch {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+  transition: 0.2s;
+}
+.ch:hover {
+  background: #cacad3;
+}
+.ch__name {
+  max-width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ch__info {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+.ch__hp {
+  width: 35px;
+}
+.ch__hp b {
+  color: red;
+}
+.ch__delete {
+  cursor: pointer;
+}
+
+#k20 {
+  width: 50px;
+  height: 50px;
+}
+#k20:hover {
+  background: #cacad3;
+}
+
+.window__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.window__buttons button {
+  margin: 0 5px;
+}/*# sourceMappingURL=style.css.map */
   </style>
-</head><body><div class="container"><div class="app"><ul class="app__characters-title-list" id="battlefield"></ul><div class="app__windows-column">
-<form id="unitBodyForm" class="app__ch-edit-form hidden">
-<input type="number" name="id" value="-1" style="display: none;">
-<p><input type="text" name="name" placeholder="Назва" class="form__name" value="" onfocusout="formOnfocusout()"></p>
-<p class="flex-jc-sb">
-<span>HP: <input type="number" name="hp" placeholder="HP" onfocusout="formOnfocusout()"></span>
-<span>Ініц:: <input type="number" name="initiative" placeholder="Ініц" class="form__initiative" min="0" value="" onfocusout="formOnfocusout()"></span>
-</p>
-<textarea name="description" cols="30" rows="5" placeholder="Опис" onfocusout="formOnfocusout()"></textarea>
-</form>
-<div class="app__corect-add">
-<form class="form__add-ch-one none" id="form_add_ch_one">
-<div class="flex-jc-sb">
-<input type="text" name="name" placeholder="Назва" class="form__name">
-<input type="number" name="hp" placeholder="HP" min="0">
-</div>
-<div class="flex-jc-sa">
-<input type="number" name="initiative" placeholder="Ініціатива" class="form__initiative" min="0">
-<input type="number" name="modification" placeholder="Мод до ініціативи">
-<div id="k20">K20</div>
-</div>
-<div class="form__button">
-<button type="submit">Додати</button>
-</div>
-</form>
-<form class="form__add-ch-some none" id="form_add_ch_some">
-<div class="flex-jc-sb">
-<input type="text" name="name" placeholder="Назва" class="form__name">
-<input type="number" name="hp" placeholder="HP" min="0">
-</div>
-<div class="flex-jc-sa">
-<input type="number" name="amount" min="0" placeholder="Кількість">
-<input type="number" name="modification" placeholder="Мод до ініціативи">
-</div>
-<div class="form__button">
-<button type="submit">Додати</button>
-</div>      
-</form>
-</div>
-<div class="window__buttons">
-<button id="ch-add-one">Додати одного</button>
-<button id="ch-add-some">Додати декількох</button>
-<button onclick="sortInitiative()">Сортувати</button>
-</div>
-</div>
-</div>
-</div>
-<script>
-   let units=[]function getLocalStorage(){return JSON.parse(localStorage.getItem('units'))}function setLocalStorage(){localStorage.setItem('units',JSON.stringify(units))}function startLocalStorage(){if(getLocalStorage()==null)setLocalStorage()units=getLocalStorage()}function getRandomInt(min,max){min=Math.ceil(min);max=Math.floor(max);return Math.floor(Math.random()*(max-min)+min)}function templateHead(data,i){return`<li class="ch"id="${data[i].id}"><div class="ch__name">${data[i].name}</div><div class="ch__info"><span class="ch__hp"><b>${data[i].hp?data[i].hp:''}</b></span><span>${data[i].initiative}</span><span class="ch__delete">X</span></div></li>`}function deleteCh(id){units.splice(id,1)setLocalStorage()renderBF()}function sortInitiative(){units.sort((a,b)=>a.initiative>b.initiative?-1:1)setLocalStorage()renderBF()}const battleground=document.querySelector('#battlefield')function renderBF(){battleground.innerHTML=``for(let i=0;i<units.length;i++){units[i].id=i battleground.innerHTML+=templateHead(units,i)}}const form_add_ch_one=document.getElementById('form_add_ch_one')form_add_ch_one.addEventListener('submit',(e)=>{e.preventDefault()if(!form_add_ch_one.name.value)return alert('Ні, без назви діла не буде')let temp={id:'',name:'',hp:'',initiative:'',description:''}temp.id=units.length temp.name=form_add_ch_one.name.value temp.hp=Number(form_add_ch_one.hp.value)temp.initiative=Number(form_add_ch_one.initiative.value)+Number(form_add_ch_one.modification.value)units.push(temp)setLocalStorage()renderBF()form_add_ch_one.name.value=''form_add_ch_one.initiative.value=''form_add_ch_one.modification.value=''})const form_add_ch_some=document.getElementById('form_add_ch_some')form_add_ch_some.addEventListener('submit',(e)=>{e.preventDefault()if(!form_add_ch_some.name.value)return alert('Ні, без назви діла не буде')if(form_add_ch_some.amount.value>20)return alert('Більше 20-и ворогів? Ти з дубу рухнув?')for(let i=0;i<form_add_ch_some.amount.value;i++){let temp={id:'',name:'',ht:'',initiative:'',description:''}temp.id=units.length temp.name=form_add_ch_some.name.value temp.hp=form_add_ch_some.hp.value temp.initiative=getRandomInt(1,20)+Number(form_add_ch_some.modification.value)units.push(temp)}setLocalStorage()renderBF()form_add_ch_some.name.value=''form_add_ch_some.modification.value=''})const b_add_one=document.querySelector('#ch-add-one')b_add_one.onclick=()=>{let oneCL=form_add_ch_one.classList let someCL=form_add_ch_some.classList if(oneCL.contains('none')){oneCL.remove('none')someCL.add('none')}else{oneCL.add('none')}}const b_add_some=document.querySelector('#ch-add-some')b_add_some.onclick=()=>{let oneCL=form_add_ch_one.classList let someCL=form_add_ch_some.classList if(someCL.contains('none')){someCL.remove('none')oneCL.add('none')}else{someCL.add('none')}}const app_ch_edit_form=document.getElementById('unitBodyForm')function formOnfocusout(){let id=Number(app_ch_edit_form.id.value)if(id<0)return let name=app_ch_edit_form.name.value let initiative=Number(app_ch_edit_form.initiative.value)let hp=Number(app_ch_edit_form.hp.value)let description=app_ch_edit_form.description.value units[id].name=name units[id].initiative=initiative units[id].hp=hp units[id].description=description setLocalStorage()renderBF()}battleground.addEventListener('click',(e)=>{let parentNode=e.target.closest('.ch')if(parentNode==null)return let id=Number(parentNode.id)if(e.target.classList[0]=='ch__delete'){deleteCh(Number(id))parentNode.remove()app_ch_edit_form.classList.add('hidden')return}else{app_ch_edit_form.classList.remove('hidden')}app_ch_edit_form.id.value=id app_ch_edit_form.name.value=units[id].name app_ch_edit_form.initiative.value=units[id].initiative app_ch_edit_form.hp.value=units[id].hp app_ch_edit_form.description.value=units[id].description})const k20=document.querySelector('#k20')k20.onclick=()=>{form_add_ch_one.initiative.value=getRandomInt(1,20)}startLocalStorage()renderBF()
+</head>
+<body>
+  <div class="container">
+    <div class="app">
+      <ul class="app__characters-title-list" id="battlefield">
+
+      </ul>
+
+      <div class="app__windows-column">
+        <form id="unitBodyForm" class="app__ch-edit-form hidden">
+          <input type="number" name="id" value="-1" style="display: none;">
+          <p><input type="text" name="name" placeholder="Назва" class="form__name" value="" onfocusout="formOnfocusout()"></p>
+          <p class="flex-jc-sb">
+            <span>HP: <input type="number" name="hp" placeholder="HP" onfocusout="formOnfocusout()"></span>
+            <span>Ініц:: <input type="number" name="initiative" placeholder="Ініц" class="form__initiative" min="0" value="" onfocusout="formOnfocusout()"></span>
+          </p>
+          
+          <!-- <button type="submit">Зберегти</button> -->
+          <textarea name="description" cols="30" rows="5" placeholder="Опис" onfocusout="formOnfocusout()"></textarea>
+        </form>
+      
+        <div class="app__corect-add">
+          <form class="form__add-ch-one none" id="form_add_ch_one">
+            <div class="flex-jc-sb">
+              <input type="text" name="name" placeholder="Назва" class="form__name">
+              <input type="number" name="hp" placeholder="HP" min="0">
+            </div>
+            <div class="flex-jc-sa">
+              <input type="number" name="initiative" placeholder="Ініціатива" class="form__initiative" min="0">
+              <input type="number" name="modification" placeholder="Мод до ініціативи">
+              <div id="k20">K20</div>
+            </div>
+            <div class="form__button">
+              <button type="submit">Додати</button>
+            </div>
+          </form>
+
+          <form class="form__add-ch-some none" id="form_add_ch_some">
+            <div class="flex-jc-sb">
+              <input type="text" name="name" placeholder="Назва" class="form__name">
+              <input type="number" name="hp" placeholder="HP" min="0">
+            </div>
+            <div class="flex-jc-sa">
+              <input type="number" name="amount" min="0" placeholder="Кількість">
+              <input type="number" name="modification" placeholder="Мод до ініціативи">
+            </div>
+            <div class="form__button">
+              <button type="submit">Додати</button>
+            </div>      
+          </form>
+        </div>
+          
+        <div class="window__buttons">
+          <button id="ch-add-one">Додати одного</button>
+          <button id="ch-add-some">Додати декількох</button>
+          <button onclick="sortInitiative()">Сортувати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let units=[];function getLocalStorage(){return JSON.parse(localStorage.getItem("units"))}function setLocalStorage(){localStorage.setItem("units",JSON.stringify(units))}function startLocalStorage(){if(getLocalStorage()==null)setLocalStorage();units=getLocalStorage()}function getRandomInt(min,max){min=Math.ceil(min);max=Math.floor(max);return Math.floor(Math.random()*(max-min)+min)}function templateHead(data,i){return`<li class="ch"id="${data[i].id}"><div class="ch__name">${data[i].name}</div><div class="ch__info"><span class="ch__hp"><b>${data[i].hp?data[i].hp:""}</b></span><span>${data[i].initiative}</span><span class="ch__delete">X</span></div></li>`}function deleteCh(id){units.splice(id,1);setLocalStorage();renderBF()}function sortInitiative(){units.sort((a,b)=>(a.initiative>b.initiative?-1:1));setLocalStorage();renderBF()}const battleground=document.querySelector("#battlefield");function renderBF(){battleground.innerHTML=``;for(let i=0;i<units.length;i++){units[i].id=i;battleground.innerHTML+=templateHead(units,i)}}const form_add_ch_one=document.getElementById("form_add_ch_one");form_add_ch_one.addEventListener("submit",(e)=>{e.preventDefault();if(!form_add_ch_one.name.value)return alert("Ні, без назви діла не буде");let temp={id:"",name:"",hp:"",initiative:"",description:""};temp.id=units.length;temp.name=form_add_ch_one.name.value;temp.hp=Number(form_add_ch_one.hp.value);temp.initiative=Number(form_add_ch_one.initiative.value)+Number(form_add_ch_one.modification.value);units.push(temp);setLocalStorage();renderBF();form_add_ch_one.name.value="";form_add_ch_one.initiative.value="";form_add_ch_one.modification.value=""});const form_add_ch_some=document.getElementById("form_add_ch_some");form_add_ch_some.addEventListener("submit",(e)=>{e.preventDefault();if(!form_add_ch_some.name.value)return alert("Ні, без назви діла не буде");if(form_add_ch_some.amount.value>20)return alert("Більше 20-и ворогів? Ти з дубу рухнув?");for(let i=0;i<form_add_ch_some.amount.value;i++){let temp={id:"",name:"",ht:"",initiative:"",description:""};temp.id=units.length;temp.name=form_add_ch_some.name.value;temp.hp=form_add_ch_some.hp.value;temp.initiative=getRandomInt(1,20)+Number(form_add_ch_some.modification.value);units.push(temp)}setLocalStorage();renderBF();form_add_ch_some.name.value="";form_add_ch_some.modification.value=""});const b_add_one=document.querySelector("#ch-add-one");b_add_one.onclick=()=>{let oneCL=form_add_ch_one.classList;let someCL=form_add_ch_some.classList;if(oneCL.contains("none")){oneCL.remove("none");someCL.add("none")}else{oneCL.add("none")}};const b_add_some=document.querySelector("#ch-add-some");b_add_some.onclick=()=>{let oneCL=form_add_ch_one.classList;let someCL=form_add_ch_some.classList;if(someCL.contains("none")){someCL.remove("none");oneCL.add("none")}else{someCL.add("none")}};const app_ch_edit_form=document.getElementById("unitBodyForm");function formOnfocusout(){let id=Number(app_ch_edit_form.id.value);if(id<0)return;let name=app_ch_edit_form.name.value;let initiative=Number(app_ch_edit_form.initiative.value);let hp=Number(app_ch_edit_form.hp.value);let description=app_ch_edit_form.description.value;units[id].name=name;units[id].initiative=initiative;units[id].hp=hp;units[id].description=description;setLocalStorage();renderBF()}battleground.addEventListener("click",(e)=>{let parentNode=e.target.closest(".ch");if(parentNode==null)return;let id=Number(parentNode.id);if(e.target.classList[0]=="ch__delete"){deleteCh(Number(id));parentNode.remove();app_ch_edit_form.classList.add("hidden");return}else{app_ch_edit_form.classList.remove("hidden")}app_ch_edit_form.id.value=id;app_ch_edit_form.name.value=units[id].name;app_ch_edit_form.initiative.value=units[id].initiative;app_ch_edit_form.hp.value=units[id].hp;app_ch_edit_form.description.value=units[id].description});const k20=document.querySelector("#k20");k20.onclick=()=>{form_add_ch_one.initiative.value=getRandomInt(1,20)};startLocalStorage();renderBF();
   </script>
 </body>
 </html>
