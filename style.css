@@ -1,0 +1,163 @@
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.flex-jc-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-jc-sa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  border: 1px solid black;
+  height: 500px;
+}
+.app input[name=hp] {
+  font-weight: bold;
+  color: red;
+}
+.app__characters-title-list {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+.app__windows-column {
+  width: 300px;
+  padding: 10px 40px;
+  padding-right: 40px;
+}
+.app__ch-edit-form {
+  height: 170px;
+}
+.app__ch-edit-form input::-webkit-outer-spin-button,
+.app__ch-edit-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.app__ch-edit-form input[name=name] {
+  height: 34px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.app__ch-edit-form input[name=hp], .app__ch-edit-form input[name=initiative] {
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  border: none;
+}
+.app__ch-edit-form textarea {
+  width: 98%;
+  resize: none;
+}
+.app__corect-add {
+  height: 220px;
+  margin-top: 30px;
+}
+.app__corect-add input::-webkit-outer-spin-button,
+.app__corect-add input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.app__corect-add input {
+  height: 30px;
+}
+
+.form__add-ch-one, .form__add-ch-some {
+  padding: 20px;
+  border: 1px solid black;
+}
+.form__add-ch-one div, .form__add-ch-some div {
+  padding: 5px 0;
+}
+.form__add-ch-one input[name=hp], .form__add-ch-some input[name=hp] {
+  width: 50px;
+}
+.form__add-ch-one input[name=initiative], .form__add-ch-one input[name=modification], .form__add-ch-one input[name=amount], .form__add-ch-some input[name=initiative], .form__add-ch-some input[name=modification], .form__add-ch-some input[name=amount] {
+  width: 70px;
+}
+.form__add-ch-one #k20, .form__add-ch-some #k20 {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  width: 35px;
+  height: 24px;
+  border: 1px solid black;
+}
+.form__button {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.form__button button {
+  width: 100px;
+  height: 30px;
+}
+
+.ch {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+  transition: 0.2s;
+}
+.ch:hover {
+  background: #cacad3;
+}
+.ch__name {
+  max-width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ch__info {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+.ch__hp {
+  width: 35px;
+}
+.ch__hp b {
+  color: red;
+}
+.ch__delete {
+  cursor: pointer;
+}
+
+#k20:hover {
+  background: #cacad3;
+}
+
+.window__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.window__buttons button {
+  margin: 0 5px;
+}
