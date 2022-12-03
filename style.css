@@ -117,10 +117,11 @@
 }
 
 .ch {
-  display: flex;
+  display: block;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 5px 10px;
   line-height: 40px;
+  text-transform: uppercase;
   color: #000;
   text-decoration: none;
   cursor: default;
@@ -128,6 +129,10 @@
 }
 .ch:hover {
   background: #cacad3;
+}
+.ch__top {
+  display: flex;
+  justify-content: space-between;
 }
 .ch__name {
   max-width: 140px;
@@ -146,8 +151,35 @@
 .ch__hp b {
   color: red;
 }
+.ch__initiative {
+  color: gray;
+}
 .ch__delete {
   cursor: pointer;
+}
+.ch__bottom {
+  display: flex;
+  line-height: 11px;
+}
+.ch__marks {
+  display: flex;
+  min-width: 60px;
+}
+.ch__marks div {
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: 0 3px;
+  background: red;
+  border-radius: 50%;
+}
+.ch__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: gray;
+  font-size: 14px;
+  text-transform: none;
 }
 
 #k20:hover {
@@ -160,4 +192,4 @@
 }
 .window__buttons button {
   margin: 0 5px;
-}
+}/*# sourceMappingURL=style.css.map */
