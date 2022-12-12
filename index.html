@@ -20,10 +20,10 @@
           <p><input type="text" name="name" placeholder="Назва" class="form__name" value="" onfocusout="formOnfocusout()"></p>
           <p class="flex-jc-sb">
             <span>HP: <input type="number" name="hp" placeholder="HP" onfocusout="formOnfocusout()"></span>
-            <span>Ініц:: <input type="number" name="initiative" placeholder="Ініц" class="form__initiative" min="0" value="" onfocusout="formOnfocusout()"></span>
+            <span>Ініціатива: <input type="number" name="initiative" placeholder="Ініц" class="form__initiative" min="0" value="" onfocusout="formOnfocusout()"></span>
+            <!-- <span>Пріор:<input type="number" name="priority" value="0" onfocusout="formOnfocusout()"></span> -->
+            <!-- <span>Колір: <input type="color" name="color"></span> -->
           </p>
-          
-          <!-- <button type="submit">Зберегти</button> -->
           <textarea name="description" cols="30" rows="5" placeholder="Опис" onfocusout="formOnfocusout()"></textarea>
         </form>
       
@@ -33,10 +33,10 @@
               <input type="text" name="name" placeholder="Назва" class="form__name">
               <input type="number" name="hp" placeholder="HP" min="0">
             </div>
-            <div class="flex-jc-sa">
+            <div class="flex-jc-sb">
               <input type="number" name="initiative" placeholder="Ініціатива" class="form__initiative" min="0">
               <input type="number" name="modification" placeholder="Мод до ініціативи">
-              <div id="k20">K20</div>
+              <div id="k20" title="Бросает К20 для инициативы">K20</div>
             </div>
             <div class="form__button">
               <button type="submit">Додати</button>
@@ -66,6 +66,6 @@
       </div>
     </div>
   </div>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
