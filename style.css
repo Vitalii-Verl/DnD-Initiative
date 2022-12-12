@@ -1,3 +1,20 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 6px; /* ширина всей полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: #212121; /* цвет зоны отслеживания */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #343434;
+}
+
+body {
+  margin: 0;
+}
+
 .none {
   display: none;
 }
@@ -18,17 +35,43 @@
   align-items: center;
 }
 
+textarea {
+  border: none;
+  padding: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
 .container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("../img/bg2.png") no-repeat center;
+  background-size: cover;
 }
 
 .app {
   display: flex;
   border: 1px solid black;
-  height: 500px;
+  height: 550px;
+  background: #191919;
+  color: #b3b3b3;
+}
+.app input {
+  color: #b3b3b3;
+}
+.app input:-webkit-autofill, .app input:-webkit-autofill:hover, .app input:-webkit-autofill:focus, .app input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #292929 inset !important;
+  -webkit-text-fill-color: #b3b3b3 !important;
+}
+.app button {
+  color: #b3b3b3;
+  background: #292929;
+  border: none;
+  cursor: pointer;
+}
+.app button:hover {
+  background: #343434;
 }
 .app input[name=hp] {
   font-weight: bold;
@@ -45,8 +88,8 @@
   padding: 10px 40px;
   padding-right: 40px;
 }
-.app__ch-edit-form {
-  height: 170px;
+.app__ch-edit-form span {
+  font-weight: bold;
 }
 .app__ch-edit-form input::-webkit-outer-spin-button,
 .app__ch-edit-form input::-webkit-inner-spin-button {
@@ -58,18 +101,30 @@
   height: 34px;
   width: 100%;
   border: none;
+  border-bottom: 1px solid #191919;
   text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
+  background: #191919;
+  color: #b3b3b3;
+}
+.app__ch-edit-form input[name=name]:focus {
+  outline: none;
+  border-bottom: 1px solid #b3b3b3;
 }
 .app__ch-edit-form input[name=hp], .app__ch-edit-form input[name=initiative] {
   text-align: center;
   width: 50px;
   height: 30px;
   border: none;
+  background: #191919;
+  color: #b3b3b3;
 }
 .app__ch-edit-form textarea {
   width: 98%;
   resize: none;
+  background: #212121;
+  color: #b3b3b3;
 }
 .app__corect-add {
   height: 220px;
@@ -87,16 +142,20 @@
 
 .form__add-ch-one, .form__add-ch-some {
   padding: 20px;
-  border: 1px solid black;
+  background: #212121;
 }
 .form__add-ch-one div, .form__add-ch-some div {
   padding: 5px 0;
+}
+.form__add-ch-one input, .form__add-ch-some input {
+  background: #292929;
+  border: none;
 }
 .form__add-ch-one input[name=hp], .form__add-ch-some input[name=hp] {
   width: 50px;
 }
 .form__add-ch-one input[name=initiative], .form__add-ch-one input[name=modification], .form__add-ch-one input[name=amount], .form__add-ch-some input[name=initiative], .form__add-ch-some input[name=modification], .form__add-ch-some input[name=amount] {
-  width: 70px;
+  width: 80px;
 }
 .form__add-ch-one #k20, .form__add-ch-some #k20 {
   display: inline-block;
@@ -104,7 +163,10 @@
   cursor: pointer;
   width: 35px;
   height: 24px;
-  border: 1px solid black;
+  background: #292929;
+}
+.form__add-ch-one #k20:hover, .form__add-ch-some #k20:hover {
+  background: #343434;
 }
 .form__button {
   width: 100%;
@@ -122,13 +184,12 @@
   padding: 5px 10px;
   line-height: 40px;
   text-transform: uppercase;
-  color: #000;
   text-decoration: none;
   cursor: default;
   transition: 0.2s;
 }
 .ch:hover {
-  background: #cacad3;
+  background: #292929;
 }
 .ch__top {
   display: flex;
@@ -149,10 +210,7 @@
   width: 35px;
 }
 .ch__hp b {
-  color: red;
-}
-.ch__initiative {
-  color: gray;
+  color: rgb(184, 35, 35);
 }
 .ch__delete {
   cursor: pointer;
@@ -177,13 +235,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: gray;
+  color: #777777;
   font-size: 14px;
   text-transform: none;
-}
-
-#k20:hover {
-  background: #cacad3;
 }
 
 .window__buttons {
@@ -192,4 +246,5 @@
 }
 .window__buttons button {
   margin: 0 5px;
+  padding: 4px 8px;
 }/*# sourceMappingURL=style.css.map */
