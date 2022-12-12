@@ -81,6 +81,7 @@ form_add_ch_one.addEventListener("submit", (e) => {
   renderBF();
 
   form_add_ch_one.name.value = "";
+  form_add_ch_one.hp.value = "";
   form_add_ch_one.initiative.value = "";
   form_add_ch_one.modification.value = "";
 });
@@ -107,6 +108,8 @@ form_add_ch_some.addEventListener("submit", (e) => {
   renderBF();
 
   form_add_ch_some.name.value = "";
+  form_add_ch_some.hp.value = "";
+  form_add_ch_some.amount.value = "";
   form_add_ch_some.modification.value = "";
 });
 
