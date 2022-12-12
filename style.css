@@ -76,7 +76,7 @@ textarea {
 }
 .app input[name=hp] {
   font-weight: bold;
-  color: red;
+  color: rgb(184, 35, 35);
 }
 .app__characters-title-list {
   width: 300px;
